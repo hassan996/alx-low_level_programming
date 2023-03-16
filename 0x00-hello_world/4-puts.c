@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-/*this function for print those word respecting betty style shit*/
+/* This program prints 'shit' to the console */
 int main(void) {
 char strng[] = "\"Programming is like building a multilingual puzzle";
 puts(strng);
-
-return (0); }
+return (0); 
+}
