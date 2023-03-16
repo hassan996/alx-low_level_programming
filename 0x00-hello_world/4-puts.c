@@ -4,9 +4,9 @@
 /* This program prints 'shit' to the console */
 int main(void) 
 {
-  char strng[] = "\"Programming is like building a multilingual puzzle";
+char strng[] = "\"Programming is like building a multilingual puzzle";
 
-  puts(strng);
+puts(strng);
   
-  return (0); 
+return (0); 
 }
