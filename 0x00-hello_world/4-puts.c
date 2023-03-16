@@ -1,13 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int main(void) //this main print this sentes
-{
-
+//this function for print those word respecting betty style shit
+int main(void) {
 char strng[] = "\"Programming is like building a multilingual puzzle";
 puts(strng);
 
-
-
-return (0);
-}
+return (0); }
