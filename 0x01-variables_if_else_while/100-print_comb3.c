@@ -10,7 +10,7 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-    int digit1, digit2;
+	int digit1, digit2;
 
 	for (digit1 = 0; digit1 < 9; digit1++)
 	{
@@ -18,13 +18,12 @@ int main(void)
 		{
 			putchar((digit1) + '0');
 			putchar((digit2) + '0');
-
+			if (digit1 == 8 && digit2 == 9)
+				continue;
 			putchar(',');
 			putchar(' ');
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
