@@ -5,7 +5,7 @@ int prime_num(int n, int m);
  *is_prime_number -function that returns 1
  *if input is prime
  *@n:arg of func integer
- *Rerturn:1 if prime or 0 false
+ *Return:1 if prime or 0 false
 */
 int is_prime_number(int n)
 {
