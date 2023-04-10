@@ -50,7 +50,6 @@ int main(int argc, char *argv[])
 		chkafi--;
 	}
 	printf("%d\n", change);
-
 	return (0);
 }
 
