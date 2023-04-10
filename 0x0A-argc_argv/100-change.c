@@ -11,27 +11,33 @@
  */
 int main(int argc, char *argv[])
 {
-	int cent, sum;
-	int c = 0;
-	int types[] = {25, 10, 5, 2, 1};
-
-	if (argc != 2)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	cent = atoi(argv[1]);
-
-	while (cent > 0 && c < sizeof(types) / sizeof(int))
-	{
-		if (cent >= types[c])
-		{
-			sum += cent / type[c];
-			cent %= type[c];
-		}
-		c++;
-	}
-	printf("%d\n", coin);
-	return (0);
+	   int cents, coins = 0;
+	   
+	   if (argc != 2)
+	   {
+        	printf("Error\n");
+        	return 1;
+	   }
+	   cents = atoi(argv[1]);
+	   
+	   while (cents > 0)
+	   {
+		   switch (cents)
+		   {
+			   case 25:
+			   case 10:
+			   case 5:
+			   case 2:
+				   cents -= cents;
+				   coins++;
+				   break;
+			   default:
+			   cents--;
+			   coins++;
+			   break;
+		   }
+	   }
+	   printf("%d\n", coins);
+	   return (0);
 }
 
