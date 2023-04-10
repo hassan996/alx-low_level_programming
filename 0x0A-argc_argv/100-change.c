@@ -11,39 +11,43 @@
  */
 int main(int argc, char *argv[])
 {
-	int cent, change = 0;
+	int chkafi, change = 0;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	cent = atoi(argv[1]);
-
-	while (cent != 0)
+	chkafi = atoi(argv[1]);
+	if (chkafi < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	while (chkafi != 0)
 	{
 		change++;
-		if ((cent - 25) >= 0)
+		if ((chkafi - 25) >= 0)
 		{
-			cent -= 25;
+			chkafi -= 25;
 			continue;
 		}
-		if ((cent - 10) >= 0)
+		if ((chkafi - 10) >= 0)
 		{
-			cent -= 10;
+			chkafi -= 10;
 			continue;
 		}
-		if ((cent - 5) >= 0)
+		if ((chkafi - 5) >= 0)
 		{
-			cent -= 5;
+			chkafi -= 5;
 			continue;
 		}
-		if ((cent - 2) >= 0)
+		if ((chkafi - 2) >= 0)
 		{
-			cent -= 2;
+			chkafi -= 2;
 			continue;
 		}
-		cent--;
+		chkafi--;
 	}
 	printf("%d\n", change);
 
