@@ -23,15 +23,15 @@ char *argstostr(int ac, char **av)
 			ln++;
 		}
 	}
-	conc = malloc((ln + 1) * sizeof(char));
+	conc = malloc(sizeof(char) * ln + 1);
 	if (conc == NULL)
 		return (NULL);
 
 	for (i = 0, z = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++, z++)
+		for (j = 0; av[i][j] != '\0'; j++,)
 		{
-			conc[z] = av[i][j];
+			conc[z++] = av[i][j];
 		}
 		conc[z++] = '\n';
 	}
