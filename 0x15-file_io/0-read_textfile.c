@@ -9,21 +9,21 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	size_t op, rd, wr;
+	ssize_t op, rd, wr;
 	char *tab;
 
 	if (filename == NULL)
 		return (0);
 
 	tab = malloc(sizeof(tab) * letters);
-	if (buffer == NULL)
+	if (tab == NULL)
 		return (0);
 
 	op = open(filename, O_RDONLY);
-	rd = read(o, tab, letters);
-	wr = write(STDOUT_FILENO, tab, r);
+	rd = read(op, tab, letters);
+	wr = write(STDOUT_FILENO, tab, rd);
 
-	if (op == -1 || rd == -1 || wr != r)
+	if (op == -1 || rd == -1 || wr != rd)
 	{
 		free(tab);
 		return (0);
